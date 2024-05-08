@@ -23,9 +23,9 @@ const CheckOut = () => {
         service_id: _id,
         price: price
     }
-     console.log(booking);
+    //  console.log(booking);
 
-     fetch('http://localhost:5000/bookings',{
+     fetch('https://car-doctor-server-roan-psi.vercel.app/bookings',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -33,9 +33,9 @@ const CheckOut = () => {
         body: JSON.stringify(booking)
      })
      .then(res => res.json())
-     .then(data => {
+     .then(() => {
         alert('booked successfully')
-        console.log(data);
+        // console.log(data);
      })
   } 
 
